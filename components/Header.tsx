@@ -22,7 +22,12 @@ const Header = () => {
           alt=""
         />
 
-        <SiTinder size={32} color="white" />
+        <SiTinder
+          className="cursor-pointer"
+          onClick={() => router.push("/")}
+          size={32}
+          color="white"
+        />
 
         <div className="flex items-center space-x-3">
           <IoIosChatbubbles
@@ -34,7 +39,7 @@ const Header = () => {
 
           <button
             className="text-white font-bold hover:animate-pulse"
-            onClick={() => signOut(auth)}
+            onClick={() => signOut(auth).then(() => router.push("/"))}
           >
             Log Out
           </button>

@@ -34,8 +34,6 @@ const Messages = () => {
 
   const [messages, setMessages] = useState<MessageProps[]>([]);
 
-  const endOfMessageRef = useRef<any>();
-
   const sendMessagehandler = async (e: FormEvent) => {
     e.preventDefault();
 
