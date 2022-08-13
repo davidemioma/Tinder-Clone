@@ -116,17 +116,15 @@ const Messages = () => {
         </div>
 
         <div className=" flex-1 flex flex-col h-[calc(100vh-5rem)] overflow-hidden">
-          <div className="flex-1 flex items-end h-[calc(100vh-10rem)] py-5 px-6 ">
-            <div className="w-full h-full overflow-y-scroll scrollbar-hide">
-              <div className="flex flex-col space-y-3">
-                {messages.map((message) => (
-                  <Message
-                    key={message.id}
-                    message={message}
-                    sender={message.userId === user?.uid}
-                  />
-                ))}
-              </div>
+          <div className="flex-1 h-[calc(100vh-10rem)] overflow-y-scroll scrollbar-hide py-5 px-6 ">
+            <div className="flex flex-col space-y-3">
+              {messages.map((message) => (
+                <Message
+                  key={message.id}
+                  message={message}
+                  sender={message.userId === user?.uid}
+                />
+              ))}
             </div>
           </div>
 
