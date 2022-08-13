@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply w-10 h-10 text-white flex items-center justify-center rounded-full hover:animate-bounce;
+  }
+}
